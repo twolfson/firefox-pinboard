@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
- 
-<prefwindow 
+
+<prefwindow
      title="Pinboard.in Toolbar Preferences"
      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
- 
+
 	<prefpane label="Pinboard.in Toolbar Preferences">
 		<preferences>
 			<preference id="pinboardff-shownotifications" name="extensions.pinboardff.notifications" type="bool"/>
+			<preference id="pinboardff-pinboard-token" name="extensions.pinboardff.pinboard-token" type="string"/>
 		</preferences>
-		
+
 		<groupbox>
 			<caption label="Settings"/>
 			<grid>
@@ -22,10 +23,14 @@
 						<label control="Notifications" value="Show notifications"/>
 						<checkbox id="autorun" preference="pinboardff-shownotifications"/>
 					</row>
+					<row>
+						<label control="Pinboard Token" value="Pinboard Token"/>
+						<textbox id="pinboard-token" preference="pinboardff-pinboard-token"/>
+					</row>
 				</rows>
 			</grid>
-		</groupbox>	
-		
+		</groupbox>
+
 	</prefpane>
- 
+
 </prefwindow>

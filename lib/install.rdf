@@ -7,11 +7,11 @@
                    em:minVersion="3.6"
                    em:maxVersion="10.0a1" />
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
-                   em:id="pinboardff@pinboard.in"
-                   em:name="Pinboard Extension"
-                   em:version="1.2"
-                   em:creator="Pinboard LLC"
-                   em:description="Toolbar buttons for Pinboard.in"
+                   em:id="firefox-pinboard@twolfson"
+                   em:name="Firefox Pinboard"
+                   em:version="0.2.0"
+                   em:creator="Todd Wolfson"
+                   em:description="Manage Pinboard.in via Firefox"
                    em:homepageURL="http://pinboard.in"
                    em:iconURL="chrome://pinboardff/skin/pin_32x32.png"
                    em:optionsURL="chrome://pinboardff/content/options.xul">

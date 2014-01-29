@@ -2,6 +2,10 @@
     list-style-image: url("chrome://pinboardff/skin/pin_16x16.png");
 }
 
+#pbff-pinmenu.visited-page {
+    list-style-image: url("chrome://pinboardff/skin/pin_32x32.png");
+}
+
 #pbff-addbookmark-button {
     list-style-image: url("chrome://pinboardff/skin/bookmark_16x16.png");
 }

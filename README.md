@@ -1,4 +1,4 @@
-# firefox-pinboard [![Build status](https://travis-ci.org/twolfson/firefox-pinboard.png?branch=master)](https://travis-ci.org/twolfson/firefox-pinboard)
+# firefox-pinboard
 
 Pinboard extension for Firefox
 

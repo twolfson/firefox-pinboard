@@ -1,0 +1,11 @@
+#pbff-pinmenu {
+    list-style-image: url("chrome://pinboardff/skin/pin_16x16.png");
+}
+
+#pbff-addbookmark-button {
+    list-style-image: url("chrome://pinboardff/skin/bookmark_16x16.png");
+}
+
+#pbff-readlater-button {
+    list-style-image: url("chrome://pinboardff/skin/read_later_16x16.png");
+}

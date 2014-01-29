@@ -1,0 +1,8 @@
+content     pinboardff    chrome/content/
+content     pinboardff    chrome/content/ contentaccessible=yes
+overlay chrome://browser/content/browser.xul chrome://pinboardff/content/pinboardff.xul
+
+locale	pinboardff	en-US	locale/en-US/
+
+skin	pinboardff	classic/1.0	skin/
+style	chrome://global/content/customizeToolbar.xul	chrome://pinboardff/skin/pinboardff.css

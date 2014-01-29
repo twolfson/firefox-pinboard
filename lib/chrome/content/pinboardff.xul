@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://pinboardff/skin/pinboardff.css" type="text/css"?>
+<overlay id="pinboardff-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://pinboardff/content/pinboardff.js"/>
+
+<keyset>
+  <key id="later-key" modifiers="meta" key="E" oncommand="PinboardFXT.readLaterCurrent();"/>
+  <key id="bmark-key" modifiers="meta" key="D" oncommand="PinboardFXT.bookmarkCurrent();event.stopPropagation()"/>
+</keyset>
+
+<toolbarpalette id="BrowserToolbarPalette">
+
+    <toolbarbutton id="pbff-pinmenu" 
+                   type="menu-button"
+                   label="Pinboard.in"
+                   tooltiptext="Pinboard bookmarks"
+                   oncommand="PinboardFXT.openTab('https://pinboard.in/');">
+
+        <menupopup>
+            <menuitem label="Save to Pinboard" 
+                      accesskey="S"
+                      tooltiptext="Save to Pinboard"
+                      oncommand="PinboardFXT.bookmarkCurrent();event.stopPropagation();" />
+
+             <menuitem label="Read later" 
+                      accesskey="R"
+                      tooltiptext="Read later"
+                      oncommand="PinboardFXT.readLaterCurrent();event.stopPropagation();" />
+
+            <menuitem label="Save tab set" 
+                      accesskey="B"
+                      tooltiptext="Save tab set"
+                      oncommand="PinboardFXT.makeTabList();event.stopPropagation();" />
+            
+            <menuseparator/>
+            
+            <menuitem label="Unread bookmarks" 
+                      accesskey="U"
+                      tooltiptext="Your unread bookmarks"
+                      oncommand="PinboardFXT.openTab('https://pinboard.in/toread');event.stopPropagation();" />
+
+            <menuitem label="All bookmarks" 
+                      accesskey="A"
+                      tooltiptext="All your bookmarks"
+                      oncommand="PinboardFXT.openTab('https://pinboard.in/');event.stopPropagation();" />
+
+            <menuitem label="Network" 
+                      accesskey="N"
+                      tooltiptext="Pinboard.in popular"
+                      oncommand="PinboardFXT.openTab('https://pinboard.in/network');event.stopPropagation();" />
+
+            <menuitem label="Tab sets"
+                      accesskey="T"
+                      tooltiptext="Your saved tab sets"
+                      oncommand="PinboardFXT.openTab('https://pinboard.in/tabs');event.stopPropagation();" />
+        </menupopup>
+
+    </toolbarbutton>
+
+
+</toolbarpalette>
+
+
+<toolbox id="navigator-toolbox">
+    <toolbar id="pinboardin-toolbar" toolbarname="Pinboard.in Toolbar"
+      accesskey="P"
+      customizable="true" mode="icons" context="toolbar-context-menu" 
+      defaultset="pbff-pinmenu,pbff-addbookmark-button,pbff-readlater-button"
+      insertbefore="PersonalToolbar" />
+</toolbox>
+
+<popup id="contentAreaContextMenu">
+  <menuitem id="pbff-bookmark-menu" label="Save to Pinboard" oncommand="PinboardFXT.bookmarkLink();"/>
+  <menuitem id="pbff-readlater-menu" label="Read later on Pinboard" oncommand="PinboardFXT.readLaterLink();"/>
+</popup>
+</overlay>

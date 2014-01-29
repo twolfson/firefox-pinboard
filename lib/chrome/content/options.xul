@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+ 
+<prefwindow 
+     title="Pinboard.in Toolbar Preferences"
+     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ 
+	<prefpane label="Pinboard.in Toolbar Preferences">
+		<preferences>
+			<preference id="pinboardff-shownotifications" name="extensions.pinboardff.notifications" type="bool"/>
+		</preferences>
+		
+		<groupbox>
+			<caption label="Settings"/>
+			<grid>
+				<columns>
+					<column flex="4"/>
+					<column flex="1"/>
+				</columns>
+				<rows>
+					<row>
+						<label control="Notifications" value="Show notifications"/>
+						<checkbox id="autorun" preference="pinboardff-shownotifications"/>
+					</row>
+				</rows>
+			</grid>
+		</groupbox>	
+		
+	</prefpane>
+ 
+</prefwindow>

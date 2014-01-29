@@ -1,7 +1,7 @@
 {
   "name": "firefox-pinboard",
   "description": "Pinboard extension for Firefox",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": "https://github.com/twolfson/firefox-pinboard",
   "author": {
     "name": "Todd Wolfson",

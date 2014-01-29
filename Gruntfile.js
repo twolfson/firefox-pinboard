@@ -26,6 +26,26 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    curl: {
+      original: {
+        src: 'https://pinboard.in/extensions/firefox/pinboardff.xpi',
+        dest: 'tmp/pinboardff.xpi'
+      }
+    },
+    copy: {
+      original: {
+        src: 'tmp/pinboardff.xpi',
+        dest: 'tmp/pinboardff.zip'
+      }
+    },
+    unzip: {
+      original: {
+        src: 'tmp/pinboardff.zip',
+        dest: 'lib/',
+      }
+    },
+
     watch: {
       'default': {
         files: '<%= jshint.files %>',
@@ -35,8 +55,10 @@ module.exports = function(grunt) {
   });
 
   // Load in grunt tasks
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  require('load-grunt-tasks')(grunt);
+
+  // Create task for getting original
+  grunt.registerTask('install-original', ['curl', 'copy', 'unzip']);
 
   // Default task.
   grunt.registerTask('default', ['jshint']);

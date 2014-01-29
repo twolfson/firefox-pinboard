@@ -25,6 +25,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
+    "dev": "listen-spawn -- sh -c 'grunt build && wget --post-file=dist/firefox-pinboard.xpi http://localhost:8888/'",
     "test": "echo 'No tests yet =(' 1>&2 && exit 1"
   },
   "dependencies": {},

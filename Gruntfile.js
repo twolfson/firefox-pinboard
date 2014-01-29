@@ -70,6 +70,9 @@ module.exports = function(grunt) {
   // Create task for getting original
   grunt.registerTask('install-original', ['curl', 'copy', 'unzip']);
 
+  // Create task for building a distributable file
+  grunt.registerTask('build', ['zip']);
+
   // Default task.
   grunt.registerTask('default', ['jshint']);
 

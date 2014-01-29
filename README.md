@@ -4,6 +4,14 @@ Pinboard extension for Firefox
 
 // TODO: Figure out versioning for .rdf file
 
+// TODO: When changing tabs, update image again
+
+// TODO: Implement security procedure to pages to verify we don't send any sensitive GET data (not sure how we achieve this but it's critical)
+
+// TODO: Document workflow (`npm run dev`)
+
+// TODO: Get proper 'visited' image
+
 ## Getting Started
 Install the module with: `npm install firefox-pinboard`
 

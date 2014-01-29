@@ -34,6 +34,6 @@ It has been released under the [UNLICENSE][].
 
 [UNLICENSE]: UNLICENSE
 
-Original rights http://pinboard.in/. Forked as of `0.1.0`.
+Original rights for `0.1.0` belong to http://pinboard.in/.
 
 https://twitter.com/Pinboard/status/358763963485405184

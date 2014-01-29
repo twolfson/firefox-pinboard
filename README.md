@@ -12,6 +12,8 @@ Pinboard extension for Firefox
 
 // TODO: Get proper 'visited' image
 
+// TODO: Try to move extension as a bootstrapped one
+
 ## Getting Started
 Install the module with: `npm install firefox-pinboard`
 

@@ -2,8 +2,6 @@
 
 Pinboard extension for Firefox
 
-// TODO: Figure out versioning for .rdf file
-
 ## Getting Started
 Install the module with: `npm install firefox-pinboard`
 

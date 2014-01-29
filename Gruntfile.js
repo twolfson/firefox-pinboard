@@ -27,6 +27,7 @@ module.exports = function(grunt) {
       }
     },
 
+    // Download original
     curl: {
       original: {
         src: 'https://pinboard.in/extensions/firefox/pinboardff.xpi',
@@ -43,6 +44,15 @@ module.exports = function(grunt) {
       original: {
         src: 'tmp/pinboardff.zip',
         dest: 'lib/',
+      }
+    },
+
+    // Build for distribution
+    zip: {
+      build: {
+        cwd: 'lib/',
+        src: 'lib/**/*',
+        dest: 'dist/firefox-pinboard.xpi'
       }
     },
 

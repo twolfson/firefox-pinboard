@@ -28,6 +28,12 @@ Support this project and [others by twolfson][gittip] via [gittip][].
 [gittip]: https://www.gittip.com/twolfson/
 
 ## License
+As of Jan 28 2014, Todd Wolfson has released this repository and all contents after the `0.1.0` release to the public domain.
+
+It has been released under the [UNLICENSE][].
+
+[UNLICENSE]: UNLICENSE
+
 Original rights http://pinboard.in/. Forked as of `0.1.0`.
 
 https://twitter.com/Pinboard/status/358763963485405184

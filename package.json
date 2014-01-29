@@ -1,5 +1,6 @@
 {
   "name": "firefox-pinboard",
+  "id": "jid1-JfcuxbtH8BzJjw",
   "description": "Pinboard extension for Firefox",
   "version": "0.2.1",
   "homepage": "https://github.com/twolfson/firefox-pinboard",
@@ -25,6 +26,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
+    "dev": "listen-spawn -- sh -c 'cfx xpi && wget --post-file=firefox-pinboard.xpi http://localhost:8888/'",
     "test": "echo 'No tests yet =(' 1>&2 && exit 1"
   },
   "dependencies": {},

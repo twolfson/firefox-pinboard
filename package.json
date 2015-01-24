@@ -50,6 +50,7 @@
   "browser": {
     "request": "browser-request"
   },
+  "browserify-shim": {},
   "keywords": [
     "pinboard",
     "extension",

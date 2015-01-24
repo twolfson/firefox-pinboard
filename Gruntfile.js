@@ -50,8 +50,8 @@ module.exports = function(grunt) {
     // Build for distribution
     zip: {
       build: {
-        cwd: 'lib/',
-        src: 'lib/**/*',
+        cwd: 'tmp-build/',
+        src: 'tmp-build/**/*',
         dest: 'dist/firefox-pinboard.xpi'
       }
     },

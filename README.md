@@ -32,7 +32,11 @@ _(Coming soon)_
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt) and test via `npm test`.
 
 ### Development
-For fast iteration, we prefer to get an automatic reupload when a change occurs. For this, we currently leverage `listen-spawn` with a Sublime Text `sublime-request` hook into the [Extension Auto-Installer add-on][].
+For fast iteration, we prefer to get an automatic reupload when a change occurs. For this, we currently leverage `listen-spawn` with a Sublime Text `sublime-request` hook into the [Extension Auto-Installer add-on][]. To start the watch task, run
+
+```bash
+npm run dev
+```
 
 // TODO: Build watch -> build -> request toolchain
 

@@ -31,6 +31,13 @@ _(Coming soon)_
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt) and test via `npm test`.
 
+### Development
+For fast iteration, we prefer to get an automatic reupload when a change occurs. For this, we currently leverage `listen-spawn` with a Sublime Text `sublime-request` hook into the [Extension Auto-Installer add-on][].
+
+// TODO: Build watch -> build -> request toolchain
+
+[Extension Auto-Installer add-on]: https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/
+
 ## Donating
 Support this project and [others by twolfson][gittip] via [gittip][].
 

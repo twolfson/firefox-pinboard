@@ -34,6 +34,7 @@
     "browser-request": "~0.3.3",
     "browserify": "~8.1.1",
     "browserify-shim": "~3.8.2",
+    "browserify-swap": "~0.2.1",
     "grunt": "~0.4.2",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-jshint": "~0.6.0",
@@ -44,13 +45,15 @@
   },
   "browserify": {
     "transform": [
-      "browserify-shim"
+      "browserify-swap"
     ]
   },
-  "browser": {
-    "request": "browser-request"
+  "browserify-swap": {
+    "@packages": ["request"],
+    "all": {
+      "request$": "browser-request"
+    }
   },
-  "browserify-shim": {},
   "keywords": [
     "pinboard",
     "extension",

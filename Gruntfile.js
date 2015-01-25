@@ -42,39 +42,23 @@ module.exports = function (grunt) {
     watch: {
       build: {
         files: ['lib/**/*'],
-        tasks: ['build', 'push-build']
+        tasks: ['build', 'shell:push-build']
       }
     },
-    // TODO: Figure out how to add file uploads to grunt-curl
-    curl: {
+    // DEV: We must use `wget` to upload to our server
+    //   https://github.com/palant/autoinstaller/issues/3
+    shell: {
       'push-build': {
-        src: {
-          url: 'http://localhost:8888/',
-          method: 'POST',
-          headers: {
-            'Content-type': 'application/x-www-form-urlencoded'
-          },
-          body: new Buffer('Run `update-curl` before running this task')
-        },
-        dest: 'tmp.txt'
+        target: {
+          command: 'wget --verbose --post-file=dist/firefox-pinboard.xpi http://localhost:8888/'
+        }
       }
     }
   });
-
-  // Define custom task for updating the curl content body
-  grunt.registerTask('update-curl', 'Update the curl info for our push', function buildPush () {
-    // Load in the curl config
-    var curlConfig = grunt.config.get('curl');
-
-    // Update the request body
-    curlConfig['push-build'].src.body = fs.readFileSync(__dirname + '/dist/firefox-pinboard.xpi');
-  });
-
   // Load in grunt tasks
   require('load-grunt-tasks')(grunt);
 
   // Create task for building a distributable file
-  grunt.registerTask('push-build', ['update-curl', 'curl:push-build']);
   grunt.registerTask('build', ['clean:build', 'copy:build', 'browserify:build', 'zip']);
   grunt.registerTask('dev', ['watch:dev']);
 };

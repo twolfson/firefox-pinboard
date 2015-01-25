@@ -1,4 +1,6 @@
-module.exports = function(grunt) {
+var fs = require('fs');
+
+module.exports = function (grunt) {
   // Configure our tasks
   grunt.initConfig({
     // For our build, clean the build directory
@@ -40,28 +42,35 @@ module.exports = function(grunt) {
     watch: {
       build: {
         files: ['lib/**/*'],
-        tasks: ['build', 'build-push']
+        tasks: ['build', 'push-build']
       }
     },
     // TODO: Figure out how to add file uploads to grunt-curl
-    'build-push': {
-      build: {
-        src: 'http://localhost:8888/',
-        extension: 'dist/firefox-pinboard.xpi'
+    curl: {
+      'push-build': {
+        src: {
+          url: 'http://localhost:8888/',
+          method: 'POST',
+          body: new Buffer('Run `update-curl` before running this task')
+        }
       }
     }
   });
 
-  // Define custom task for pushing a new extension
-  grunt.registerMultiTask('build-push', 'Push extension to auto-installer add-on in Firefox', function buildPush () {
-    var src = this.src;
-    console.log(src);
+  // Define custom task for updating the curl content body
+  grunt.registerTask('update-curl', 'Update the curl info for our push', function buildPush () {
+    // Load in the curl config
+    var curlConfig = grunt.config.get('curl');
+
+    // Update the request body
+    curlConfig['push-build'].src.body = fs.readFileSync(__dirname + '/dist/firefox-pinboard.xpi');
   });
 
   // Load in grunt tasks
   require('load-grunt-tasks')(grunt);
 
   // Create task for building a distributable file
+  grunt.registerTask('push-build', ['update-curl', 'curl:push-build']);
   grunt.registerTask('build', ['clean:build', 'copy:build', 'browserify:build', 'zip']);
   grunt.registerTask('dev', ['watch:dev']);
 };

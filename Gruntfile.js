@@ -49,8 +49,9 @@ module.exports = function (grunt) {
     //   https://github.com/palant/autoinstaller/issues/3
     shell: {
       'push-build': {
-        target: {
-          command: 'wget --verbose --post-file=dist/firefox-pinboard.xpi http://localhost:8888/'
+        command: 'wget --verbose --post-file=dist/firefox-pinboard.xpi http://localhost:8888/',
+        options: {
+          failOnError: false
         }
       }
     }

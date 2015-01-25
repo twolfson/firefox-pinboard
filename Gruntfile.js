@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 
     // During development, watch our files and trigger a re-upload via a push
     watch: {
-      build: {
+      dev: {
         files: ['lib/**/*'],
         tasks: ['build', 'push-build']
       }

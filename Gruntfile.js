@@ -51,6 +51,9 @@ module.exports = function (grunt) {
         src: {
           url: 'http://localhost:8888/',
           method: 'POST',
+          headers: {
+            'Content-type': 'application/x-www-form-urlencoded'
+          },
           body: new Buffer('Run `update-curl` before running this task')
         }
       }

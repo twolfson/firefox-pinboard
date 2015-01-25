@@ -25,7 +25,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "build": "rm -r tmp-build/ || true; cp lib/ tmp-build/ -r && grunt build",
+    "build": "rm -r tmp-build/ || true; grunt build",
     "dev": "listen-spawn -- sh -c 'npm run build && wget --post-file=dist/firefox-pinboard.xpi http://localhost:8888/'",
     "lint": "twolfson-style lint lib/",
     "test": "npm run lint"

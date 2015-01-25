@@ -35,13 +35,13 @@ module.exports = function(grunt) {
       }
     }
 
-    // During development, watch our files and trigger a re-upload via a push
+    // TODO: During development, watch our files and trigger a re-upload via a push
   });
 
   // Load in grunt tasks
   require('load-grunt-tasks')(grunt);
 
   // Create task for building a distributable file
-  grunt.registerTask('build', ['browserify:build', 'zip']);
+  grunt.registerTask('build', ['copy:build', 'browserify:build', 'zip']);
   grunt.registerTask('dev', ['watch:dev']);
 };

@@ -42,6 +42,6 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Create task for building a distributable file
-  grunt.registerTask('build', ['zip']);
+  grunt.registerTask('build', ['browserify:build', 'zip']);
   grunt.registerTask('dev', ['watch:dev']);
 };

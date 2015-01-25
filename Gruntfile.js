@@ -11,7 +11,8 @@ module.exports = function(grunt) {
       build: {
         files: [{
           expand: true,
-          src: ['lib/**/*'],
+          cwd: 'lib/',
+          src: ['**/*'],
           dest: 'tmp-build/'
         }]
       }

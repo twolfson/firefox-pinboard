@@ -34,9 +34,28 @@ module.exports = function(grunt) {
         src: 'tmp-build/**/*',
         dest: 'dist/firefox-pinboard.xpi'
       }
-    }
+    },
 
-    // TODO: During development, watch our files and trigger a re-upload via a push
+    // During development, watch our files and trigger a re-upload via a push
+    watch: {
+      build: {
+        files: ['lib/**/*'],
+        tasks: ['build', 'build-push']
+      }
+    },
+    // TODO: Figure out how to add file uploads to grunt-curl
+    'build-push': {
+      build: {
+        src: 'http://localhost:8888/',
+        extension: 'dist/firefox-pinboard.xpi'
+      }
+    }
+  });
+
+  // Define custom task for pushing a new extension
+  grunt.registerMultiTask('build-push', 'Push extension to auto-installer add-on in Firefox', function buildPush () {
+    var src = this.src;
+    console.log(src);
   });
 
   // Load in grunt tasks

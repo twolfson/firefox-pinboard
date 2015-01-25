@@ -14,8 +14,6 @@ https://pinboard.in/extensions/firefox/pinboardff.xpi
 
 // TODO: Implement security procedure to pages to verify we don't send any sensitive GET data (not sure how we achieve this but it's critical)
 
-// TODO: Document workflow (`npm run dev`)
-
 // TODO: Get proper 'visited' image
 
 // TODO: Try to move extension as a bootstrapped one
@@ -38,13 +36,19 @@ _(Coming soon)_
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via `npm run lint`.
 
 ### Development
-For fast iteration, we prefer to get an automatic reupload when a change occurs. For this, we currently leverage `listen-spawn` with a Sublime Text `sublime-request` hook into the [Extension Auto-Installer add-on][]. To start the watch task, run
+For fast iteration, we prefer to get an automatic reupload when a change occurs. Install the project dependencies and the [Extension Auto-Installer add-on][].
+
+```bash
+npm install
+```
+
+https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/
+
+Once the dependencies are set up, you can start the watch task via:
 
 ```bash
 npm run dev
 ```
-
-// TODO: Build watch -> build -> request toolchain
 
 [Extension Auto-Installer add-on]: https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/
 

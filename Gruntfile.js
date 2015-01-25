@@ -42,7 +42,7 @@ module.exports = function (grunt) {
     watch: {
       build: {
         files: ['lib/**/*'],
-        tasks: ['build', 'shell:push-build']
+        tasks: ['build', 'push-build']
       }
     },
     // DEV: We must use `wget` to upload to our server
@@ -60,6 +60,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Create task for building a distributable file
+  grunt.registerTask('push-build', ['shell:push-build']);
   grunt.registerTask('build', ['clean:build', 'copy:build', 'browserify:build', 'zip']);
   grunt.registerTask('dev', ['watch:dev']);
 };

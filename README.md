@@ -2,6 +2,12 @@
 
 Pinboard extension for Firefox
 
+`firefox-pinboard` was built to provide an "Already bookmarked" image on already bookmarked pages. It is forked from the official Firefox Pinboard extension from:
+
+https://pinboard.in/extensions/firefox/pinboardff.xpi
+
+> Proof of fork exists in version `0.1.0` where we download, rename to `.zip`, and extract
+
 // TODO: Figure out versioning for .rdf file
 
 // TODO: When changing tabs, update image again

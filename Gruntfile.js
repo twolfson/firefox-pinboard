@@ -1,26 +1,6 @@
 module.exports = function(grunt) {
   // Configure our tasks
   grunt.initConfig({
-    // Download original
-    curl: {
-      original: {
-        src: 'https://pinboard.in/extensions/firefox/pinboardff.xpi',
-        dest: 'tmp/pinboardff.xpi'
-      }
-    },
-    copy: {
-      original: {
-        src: 'tmp/pinboardff.xpi',
-        dest: 'tmp/pinboardff.zip'
-      }
-    },
-    unzip: {
-      original: {
-        src: 'tmp/pinboardff.zip',
-        dest: 'lib/',
-      }
-    },
-
     // Build for distribution
     zip: {
       build: {

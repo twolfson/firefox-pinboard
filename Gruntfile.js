@@ -55,7 +55,8 @@ module.exports = function (grunt) {
             'Content-type': 'application/x-www-form-urlencoded'
           },
           body: new Buffer('Run `update-curl` before running this task')
-        }
+        },
+        dest: 'tmp.txt'
       }
     }
   });

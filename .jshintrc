@@ -19,7 +19,8 @@
     "it": true,
     "Components": true,
     "gContextMenu": true,
-    "gBrowser": true
+    "gBrowser": true,
+    "pref": true
   },
   "curly": true,
   "indent": 2,
